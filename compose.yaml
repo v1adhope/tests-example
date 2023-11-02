@@ -1,0 +1,12 @@
+services:
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: test
+      POSTGRES_USER: postgres
+    volumes:
+      - ./scripts:/docker-entrypoint-initdb.d
