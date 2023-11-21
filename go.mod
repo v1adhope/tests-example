@@ -1,4 +1,4 @@
-module polygon
+module github.com/v1adhope/tests-example
 
 go 1.21.3
 

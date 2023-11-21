@@ -4,8 +4,9 @@ package repository
 import (
 	"context"
 	"fmt"
-	"polygon/internal/entity"
-	"polygon/pkg/postgres"
+
+	"github.com/v1adhope/tests-example/internal/entity"
+	"github.com/v1adhope/tests-example/pkg/postgres"
 
 	"github.com/Masterminds/squirrel"
 )
@@ -94,6 +95,9 @@ func (pg *MemberRepo) Delete(ctx context.Context, id *uint64) error {
 	}
 
 	_, err = pg.Pool.Exec(ctx, sql, args...)
+	if err != nil {
+		return fmt.Errorf("Repo: Delete: Exec: %s", err)
+	}
 
 	return nil
 }

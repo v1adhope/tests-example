@@ -2,9 +2,10 @@ package repository
 
 import (
 	"context"
-	"polygon/internal/entity"
-	"polygon/pkg/postgres"
 	"testing"
+
+	"github.com/v1adhope/tests-example/internal/entity"
+	"github.com/v1adhope/tests-example/pkg/postgres"
 
 	"github.com/stretchr/testify/assert"
 	tc "github.com/testcontainers/testcontainers-go/modules/compose"

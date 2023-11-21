@@ -1,6 +1,6 @@
 package repository
 
-import "polygon/internal/entity"
+import "github.com/v1adhope/tests-example/internal/entity"
 
 type MemberDTO struct {
 	ID        uint64
